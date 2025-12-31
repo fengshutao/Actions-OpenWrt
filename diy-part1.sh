@@ -16,10 +16,9 @@
 # Add a feed source
 # echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
 # echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
-echo >> feeds.conf.default
-echo 'src-git istore https://github.com/linkease/istore;main' >> feeds.conf.default
-./scripts/feeds update istore
-./scripts/feeds install -d y -p istore luci-app-store
+# iStore
+git_sparse_clone main https://github.com/linkease/istore-ui app-store-ui
+git_sparse_clone main https://github.com/linkease/istore luci
 # echo 'src-git modemfeed https://github.com/koshev-msk/modemfeed' >>feeds.conf.default
 # echo 'src-git smpackage https://github.com/kenzok8/small-package' >>feeds.conf.default
 # echo 'src-git small https://github.com/kenzok8/small' >>feeds.conf.default
