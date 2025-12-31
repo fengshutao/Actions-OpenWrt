@@ -23,6 +23,9 @@
 git clone https://github.com/lkiuyu/luci-app-cpu-perf package/luci-app-cpu-perf
 git clone https://github.com/lkiuyu/luci-app-cpu-status package/luci-app-cpu-status
 git clone https://github.com/lkiuyu/luci-app-temp-status package/luci-app-temp-status
-git clone https://github.com/lkiuyu/DbusSmsForwardCPlus package/DbusSmsForwardCPlus
-git clone https://github.com/linkease/istore package/istore
-
+# git clone https://github.com/lkiuyu/DbusSmsForwardCPlus package/DbusSmsForwardCPlus
+echo >> feeds.conf.default
+echo 'src-git istore https://github.com/linkease/istore;main' >> feeds.conf.default
+echo >> feeds.conf.default
+echo 'src-git nas https://github.com/linkease/nas-packages.git;master' >> feeds.conf.default
+echo 'src-git nas_luci https://github.com/linkease/nas-packages-luci.git;main' >> feeds.conf.default
